@@ -15,4 +15,4 @@ def logout():
 
 @auth.route('/signin')
 def sign_in():
-    return render_template("index.html")
+    return render_template("signin.html")
