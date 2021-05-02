@@ -4,8 +4,8 @@ views = Blueprint('views', __name__)
 
 
 @views.route('/', methods=['GET', 'POST'])
-def home():
-    if method == 'POST':
+def index():
+    if request.method == 'POST':
         return render_template("home.html", name=request.form.get('name'))
-    else:
-        return render_template("index.html")
+
+    return render_template("index.html")
