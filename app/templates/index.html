@@ -2,9 +2,18 @@
 {% block title %}Index{% endblock %}
 
 {% block content %}
+{% if session['name'] %}
 <div class="container">
     <div class="row">
-        <div class="page-header">Ciao Mondo!</div>
+        <div class="page-header">Ciao, benvenuto {{ name }}!</div>
     </div>
 </div>
+
+{% else %}
+<div class="container">
+    <div class="row">
+        <div class="page-header">Ciao, <a href="/auth/signin">registrati</a> per <a href="/auth/login">accedere</a> al servizio</div>
+    </div>
+</div>
+{% endif %}
 {% endblock %}

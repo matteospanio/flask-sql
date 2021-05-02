@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign in{% endblock %}
+
+{% block content %}
+<div class="container">
+    <form class="row g-3" action="/" method="POST">
+            <div class="col-auto">
+                <input type="text" name="name" class="text" placeholder="Your Name">
+            </div>
+            <div class="col-auto">
+                <input type="email" name="email" class="text" id="staticEmail2" placeholder="email@example.com">
+            </div>
+            <div class="col-auto">
+                <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+            </div>
+                <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Sign in</button>
+            </div>
+    </form>
+</div>
+{% endblock %}
